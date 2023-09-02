@@ -16,6 +16,5 @@ var twoSum = function(nums, target) {
 
 
 // Time Complexity: O(n^2) - The time complexity is still quadratic due to the nested loops.
-
-Space Complexity: O(1) or O(2) (depending on whether you consider loop variables) - constant 
-because the size of the returned array (containing the indices) is fixed and does not depend on the input size.
+// Space Complexity: O(1) or O(2) (depending on whether you consider loop variables) - constant 
+// because the size of the returned array (containing the indices) is fixed and does not depend on the input size.
