@@ -14,3 +14,6 @@ for i  in range(2, n):
         secondmax = a[i]
 
 print(secondmax)
+
+
+// Time Complexity: O(n) - The time complexity is linear.
