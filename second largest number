@@ -1,0 +1,16 @@
+a = [1, 5, 345, 78, 99, 5558, 3, 7, 8]
+
+mx = max(a[0], a[1])
+secondmax = min(a[0], a[1])
+n = len(a)
+for i  in range(2, n):
+    if a[i] > mx:
+        secondmax = mx
+        mx = a[i]
+
+    elif a[i] > secondmax and mx != a[i]:
+        secondmax = a[i]
+    elif mx == secondmax and secondmax != a[i]:
+        secondmax = a[i]
+
+print(secondmax)
