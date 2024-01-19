@@ -1,0 +1,24 @@
+# This function uses a set of nested for loops with the range() function 
+# to create a matrix of numbers. The upper range value in the range() 
+# function should be included in the matrix. The matrix should consist 
+# of a set of numbers that fill both rows and columns.
+
+def matrix(initial_number, end_of_first_row):
+    n1 = initial_number
+    n2 = end_of_first_row + 1  # include the upper range value with +1
+    
+    for column in range(n1, n2):
+        for row in range(n1, n2):
+            print(column * row, end=" ")
+        
+        print()
+
+matrix(1, 4)
+
+
+# Should print:
+# 1 2 3 4 
+# 2 4 6 8 
+# 3 6 9 12 
+# 4 8 12 16 
+# 4 8 12 16 
