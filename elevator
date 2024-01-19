@@ -1,0 +1,55 @@
+
+# This function will accept two integer variables: the floor
+# number that a passenger "enter"s an elevator and the floor
+# number the passenger is going to "exit". Then, the function
+# counts up or down from the two floor numbers.
+def elevator_floor(enter, exit):
+    # The "floor" variable will be used as a counter and to  
+    # print the floor numbers. The "elevator_direction"
+    # variable will hold the string "Going up: " or 
+    # "Going down: " plus the count up or down of the 
+    # "floor" numbers.
+    floor = enter
+    elevator_direction = ""
+
+    # If the passenger enters the elevator on a floor that  
+    # is higher than the destination floor:
+    if enter > exit:
+        
+        # Then the "elevator_direction" string will be 
+        # initialized with the string "Going down: ".
+        elevator_direction = "Going down: "
+
+   
+        while floor >= exit:
+            elevator_direction += str(floor)
+
+            if floor > exit:
+                elevator_direction += " | "
+            floor -= 1
+
+    # Else, it is implied that the passenger is entering the  
+    # elevator on a floor that is lower than the destination 
+    # floor.
+    else:
+
+        # The "elevator_direction" string will be initialized 
+        # with the string "Going up: ".
+        elevator_direction = "Going up: "
+        
+        while floor <= exit:
+            elevator_direction += str(floor)
+
+            if floor < exit:
+                elevator_direction += " | "
+
+            floor += 1
+
+    # Returns the string holding the elevator direction (Going down or 
+    # Going up) along with the floor countdown or count up.
+    return elevator_direction
+
+
+# Call the function with 2 integer parameters. 
+print(elevator_floor(1,4)) # Should print Going up: 1 | 2 | 3 | 4
+print(elevator_floor(6,2)) # Should print Going down: 6 | 5 | 4 | 3 | 2
