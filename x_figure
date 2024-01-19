@@ -1,0 +1,22 @@
+# This function accepts a CEO's salary as a variable. 
+# It counts the number of digits in the salary and 
+# returns the sentence like:
+# "The CEO has a 6-figure salary."
+def X_figure(salary):
+    
+    tally = 0
+
+    if salary == 0:
+        tally += 1
+
+    while salary >= 1:
+        salary = salary//10 # Using integer division to preventing floating value
+
+        tally += 1
+
+    return tally
+ 
+
+print("The CEO has a " + str(X_figure(2300000)) + "-figure salary.")
+
+# Should print"The CEO has a 7-figure salary."
