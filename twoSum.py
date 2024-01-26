@@ -20,8 +20,14 @@ print(twoSum([1, 5, 1, 5, 28, 10, 40, 23, 4], 15))
 # because the size of the returned array (containing the indices) is fixed and does not depend on the input size.
 
 
-# Method 2
+# # Method 2
+
 # def twoSum(nums, target):
-#     return [[i, j] for i, x in enumerate(nums) for j, y in enumerate(nums[i+1:], i+1) if x + y == target]
+#     for i, x in enumerate(nums):
+#         for j, y in enumerate(nums[i+1:], i+1):
+#             if x + y == target:
+#                 return [[i, j]]
+#     return []
 
 # print(twoSum([1, 5, 1, 5, 28, 10, 40, 23, 4], 15))
+
