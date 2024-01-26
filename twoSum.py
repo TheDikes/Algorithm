@@ -1,0 +1,27 @@
+# Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+ 
+def twoSum(nums, target):
+    for i in range(len(nums)):
+        for j in range (i+1, len(nums)):
+            if nums[i] + nums[j] == target:
+                return([i, j])
+
+    return([])
+
+
+print(twoSum([1, 5, 1, 5, 28, 10, 40, 23, 4], 15))
+
+
+
+# this code implements a brute-force approach to find a pair of numbers in an array whose sum equals a target value.
+ 
+# Time Complexity: O(n^2) - The time complexity is still quadratic due to the nested loops.
+# Space Complexity: O(1) or O(2) (depending on whether you consider loop variables) - constant 
+# because the size of the returned array (containing the indices) is fixed and does not depend on the input size.
+
+
+# Method 2
+# def twoSum(nums, target):
+#     return [[i, j] for i, x in enumerate(nums) for j, y in enumerate(nums[i+1:], i+1) if x + y == target]
+
+# print(twoSum([1, 5, 1, 5, 28, 10, 40, 23, 4], 15))
