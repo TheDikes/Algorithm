@@ -1,4 +1,4 @@
-a = [1, 5, 345, 78, 99, 5558, 3, 7, 8]
+a = [1, 5, 345, 78, 99, 5558, 3, 7, 823]
 
 mx = max(a[0], a[1])
 secondmax = min(a[0], a[1])
@@ -16,4 +16,4 @@ for i  in range(2, n):
 print(secondmax)
 
 
-// Time Complexity: O(n) - The time complexity is linear.
+# Time Complexity: O(n) - The time complexity is linear.
