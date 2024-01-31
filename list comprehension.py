@@ -2,9 +2,6 @@
 #For this question, you must use a for loop to create the list. 
 
 filenames = ["program.c", "stdio.hpp", "sample.hpp", "a.out", "math.hpp", "hpp.out"]
-# Generate new_filenames as a list containing the new filenames
-# using as many lines of code as your chosen method requires.
-
 
 new_filenames = []
 for filename in filenames:
