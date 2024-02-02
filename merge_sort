@@ -1,16 +1,66 @@
 def merge_sort(array):
-    
-    middle_point = len(array) // 2 # using integer division to avoid floating point.
-    left_part = array[:middle_point]
-    right_part = array[middle_point:]
-    
-    merge_sort(left_part)
-    merge_sort(right_part)
+    if len(array) > 1:
+        # Divide the array into two halves
+        middle_point = len(array) // 2
+        print(middle_point)
 
-    left_array_index = 0
-    right_array_index = 0
-    sorted_index = 0
+        left_part = array[:middle_point]
+        right_part = array[middle_point:]
 
-    while left_array_index < len(left_part) and right_array_index < len(right_part):
-         if left_part[left_array_index] < right_part[right_array_index]:
+        # Recursive calls to sort the two halves
+        merge_sort(left_part)
+        merge_sort(right_part)
+
+        # Merge the sorted subarrays
+        left_array_index = right_array_index = sorted_index = 0
+        while left_array_index < len(left_part) and right_array_index < len(right_part):
+            if left_part[left_array_index] < right_part[right_array_index]:
+                array[sorted_index] = left_part[left_array_index]
+                left_array_index += 1
+            else:
+                array[sorted_index] = right_part[right_array_index]
+                right_array_index += 1
+            sorted_index += 1
+
+        # Copy remaining elements of left_part, if any
+        while left_array_index < len(left_part):
             array[sorted_index] = left_part[left_array_index]
+            left_array_index += 1
+            sorted_index += 1
+
+        # Copy remaining elements of right_part, if any
+        while right_array_index < len(right_part):
+            array[sorted_index] = right_part[right_array_index]
+            right_array_index += 1
+            sorted_index += 1
+
+# Example usage
+arr = [38, 27, 43, 3, 9, 82, 10, 15]
+print("Original array:", arr)
+merge_sort(arr)
+print("Sorted array:", arr)
+
+
+# def merge_sort(array):
+    
+#     middle_point = len(array) // 2 # using integer division to avoid floating point.
+#     left_part = array[:middle_point]
+#     right_part = array[middle_point:]
+    
+#     merge_sort(left_part)
+#     merge_sort(right_part)
+
+#     left_array_index = 0
+#     right_array_index = 0
+#     sorted_index = 0
+
+#     while left_array_index < len(left_part) and right_array_index < len(right_part):
+#          if left_part[left_array_index] < right_part[right_array_index]:
+#             array[sorted_index] = left_part[left_array_index]
+
+
+
+# The time complexity of the merge sort algorithm is O(n log n) in all cases. 
+# This complexity arises from the fact that the merge sort algorithm divides the input
+# array into halves recursively until the base case is reached (i.e., until the array contains at most one element), 
+# and then merges the sorted halves.

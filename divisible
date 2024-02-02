@@ -1,0 +1,17 @@
+# Find the number of elements in an array that are divisible by 2 and greater than 15.
+# For example, 
+# divisible(A)
+# divisible([2, 3, 12, 18, 42, 24]) to return 3
+# divisible([100, 84, 37]) to return 2
+# divisible([5, 8, 6, 12]) to 0 
+
+
+def divisible(num):
+    count = 0
+    for i in range(len(num)):
+        if num[i] % 2 == 0 and num[i] > 15:
+            count+=1
+
+    return count
+
+print(divisible([2, 3, 12, 18, 42, 24])) #to return 3

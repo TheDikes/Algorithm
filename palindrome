@@ -29,6 +29,7 @@ print(is_palindrome("kayak")) # Should be True
 def palindrome(s):
     s = ''.join(s.lower().split())
     
+    
     reversed_s = ''.join(reversed(s))
     
     return s == reversed_s
