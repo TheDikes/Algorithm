@@ -1,0 +1,27 @@
+arr = [0, 1, 3, 6, 10, 13, 15, 17, 22, 30]
+target = 22
+
+def binary_search(arr, target):
+
+    left = 0
+    right = len(arr) - 1
+
+    while left <= right:
+        mid = (left + right) // 2      # It works with math.floor too, but interger division is faster.     
+
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        elif arr[mid] > target:
+            right =  mid - 1
+        
+    return -1 # if target not found
+
+
+print(binary_search(arr, target))
+print(binary_search([3, 4, 5, 6, 7], 9))
+print(binary_search([3, 4, 5, 6, 7], 3))
+
+
+# Time complexity of binary search is O(log n)
