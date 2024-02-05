@@ -1,0 +1,13 @@
+def sumdigits(nums):
+    sum = 0
+
+    for num in str(nums):
+        sum += int(num)
+    
+    return sum
+
+print(sumdigits(10564))  
+
+# To sum the digits of a number, it's necessary to convert the number to a string first so that it can be iterated over digit by digit.
+# Then, each character representing a digit is converted back to an integer and added to the sum.
+# Finally, the total sum is returned.

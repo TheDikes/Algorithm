@@ -45,7 +45,8 @@ print("Sorted array:", arr)
 
 
 
-# The time complexity of the merge sort algorithm is O(n log n) in all cases. 
-# This complexity arises from the fact that the merge sort algorithm divides the input
-# array into halves recursively until the base case is reached (i.e., until the array contains at most one element), 
-# and then merges the sorted halves.
+# # The time complexity of the merge sort algorithm is O(n log n) in all cases. 
+# # This complexity arises from the fact that the merge sort algorithm divides the input
+# # array into halves recursively until the base case is reached (i.e., until the array contains at most one element), 
+# # and then merges the sorted halves.
+
