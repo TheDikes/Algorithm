@@ -10,7 +10,7 @@ def X_figure(salary):
         tally += 1
 
     while salary >= 1:
-        salary = salary//10 # Using integer division to preventing floating value
+        salary = salary // 10 # Using integer division to preventing floating value
 
         tally += 1
 

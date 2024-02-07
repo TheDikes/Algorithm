@@ -38,10 +38,11 @@ def merge_sort(array):
             sorted_index += 1
 
 # Example usage
-arr = [38, 27, 43, 3, 9, 82, 10, 15]
-print("Original array:", arr)
-merge_sort(arr)
-print("Sorted array:", arr)
+if __name__ == '__main__':
+    arr = [38, 27, 43, 3, 9, 82, 10, 15]
+    print("Original array:", arr)
+    merge_sort(arr)
+    print("Sorted array:", arr)
 
 
 

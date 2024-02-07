@@ -11,3 +11,21 @@ print(sumdigits(10564))
 # To sum the digits of a number, it's necessary to convert the number to a string first so that it can be iterated over digit by digit.
 # Then, each character representing a digit is converted back to an integer and added to the sum.
 # Finally, the total sum is returned.
+
+
+
+# recursively
+def sumdigits_recursive(num):
+    # Base case: If num has only one digit, return num
+    if num < 10:
+        return num
+    
+    # Recursive case: Split num into its first digit and remaining digits
+    first_digit = num // 10
+    remaining_digits = num % 10
+    
+    # Recur on the remaining digits and add the first digit
+    return first_digit + sumdigits_recursive(remaining_digits)
+
+# Example usage:
+print(sumdigits_recursive(10564))
