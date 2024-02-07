@@ -20,12 +20,25 @@ def sumdigits_recursive(num):
     if num < 10:
         return num
     
-    # Recursive case: Split num into its first digit and remaining digits
-    first_digit = num // 10
-    remaining_digits = num % 10
-    
-    # Recur on the remaining digits and add the first digit
-    return first_digit + sumdigits_recursive(remaining_digits)
+    # Recursive case: Sum the last digit and recurse on the remaining digits
+    return num % 10 + sumdigits_recursive(num // 10)
 
 # Example usage:
 print(sumdigits_recursive(10564))
+
+
+
+def sumdigits_recursive(num):
+    # Base case: If num has only one digit, return num
+    if num < 10:
+        return num
+    
+    # Convert the number to a string
+    num_str = str(num)
+    
+    # Recursive case: Sum the first digit and recurse on the remaining digits
+    return int(num_str[0]) + sumdigits_recursive(int(num_str[1:]))
+
+# Example usage:
+print(sumdigits_recursive(10564))
+
